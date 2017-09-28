@@ -5,10 +5,7 @@
 var express = require('express');
 var router = express.Router();
 var ObjectId = require('mongodb').ObjectId;
-// var multer = require('multer');
-// var upload = multer({dest:'public/images'})
 
-/* GET home page. */
 router.get('/getBooks', function(req, res, next) {
     console.log('from get Books')
     var documents=[];
@@ -76,11 +73,10 @@ router.post('/addReview', function(req, res, next){
                     console.log("asdfasdf " + dc);
                     res.json(dc);
                     dbs.close();
-                    dbs.close();
-                    dbs.close();
+
+
                 })
-                // console.log(doc);
-                // res.end();
+
 
             });
 
